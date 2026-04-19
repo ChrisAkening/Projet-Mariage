@@ -1,0 +1,225 @@
+body {
+  font-family: Georgia, serif;
+  color: #333;
+  background-color: #fdf8f4;
+}
+
+/* --- BARRE DE NAVIGATION --- */
+.navbar {
+  background-color: #fff;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #f0e6d3;
+  position: fixed;
+  top: 0;
+  width: 97%;
+  z-index: 97;
+}
+
+.logo img{
+  width: 150px;
+  border-radius: 50%;
+  font-weight: bold;
+  color: #8b5e3c;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  color: #8b5e3c;
+}
+
+.btn-nav {
+  background-color: #8b5e3c;
+  color: #fff !important;
+  padding: 8px 18px;
+  border-radius: 25px;
+}
+
+.btn-nav:hover {
+  background-color: #6d4a2e !important;
+}
+
+/* --- EN-TÊTE DE LA PAGE --- */
+.entete {
+  margin-top: 70px;
+  background-color: #8b5e3c;
+  padding: 50px;
+  text-align: center;
+  color: #fff;
+}
+
+.entete h1 {
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+
+.entete p {
+  font-size: 18px;
+  color: #f0e6d3;
+}
+
+/* --- CONTENU PRINCIPAL --- */
+.contenu-principal {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px 60px;
+}
+
+/* --- FORMULAIRE --- */
+.formulaire-mariage {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* --- SECTIONS DU FORMULAIRE --- */
+.section-formulaire {
+  margin-bottom: 40px;
+  border-bottom: 1px solid #f0e6d3;
+  padding-bottom: 30px;
+}
+
+.section-formulaire h2 {
+  font-size: 22px;
+  color: #8b5e3c;
+  margin-bottom: 20px;
+}
+
+/* --- GROUPE DE CHAMPS CÔTE À CÔTE --- */
+.groupe-champs {
+  display: flex;
+  gap: 20px;
+}
+
+.groupe-champs .champ {
+  flex: 1;
+}
+
+/* --- UN CHAMP DE FORMULAIRE --- */
+.champ {
+  margin-bottom: 20px;
+}
+
+.champ label {
+  display: block;
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+/* Style commun pour tous les champs de saisie */
+.champ input,
+.champ textarea,
+.champ select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: Georgia, serif;
+  background-color: #fdf8f4;
+  color: #333;
+}
+
+/* Effet quand on clique sur un champ */
+.champ input:focus,
+.champ textarea:focus,
+.champ select:focus {
+  outline: none;
+  border-color: #8b5e3c;
+  background-color: #fff;
+}
+
+.champ small {
+  display: block;
+  margin-top: 5px;
+  font-size: 12px;
+  color: #999;
+}
+
+/* --- APERÇU DE LA PHOTO --- */
+.apercu-photo {
+  margin-top: 15px;
+  width: 100%;
+  height: 200px;
+  border: 2px dashed #ddd;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #bbb;
+  font-size: 14px;
+  overflow: hidden;
+}
+
+.apercu-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* --- BOUTONS D'ACTION --- */
+.boutons-action {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* Bouton Effacer */
+.btn-annuler {
+  background-color: #f0e6d3;
+  color: #8b5e3c;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: Georgia, serif;
+}
+
+.btn-annuler:hover {
+  background-color: #e0d0bb;
+}
+
+/* Bouton Publier */
+.btn-publier {
+  background-color: #8b5e3c;
+  color: #fff;
+  border: none;
+  padding: 14px 35px;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: Georgia, serif;
+}
+
+.btn-publier:hover {
+  background-color: #744e2f;
+}
+
+/* --- PIED DE PAGE --- */
+.pied-page {
+  background-color: #8b5e3c;
+  color: #fff;
+  text-align: center;
+  padding: 30px;
+  font-size: 14px;
+  line-height: 2;
+}
