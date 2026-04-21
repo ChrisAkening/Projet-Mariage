@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Créer un Mariage - WeddingHub</title>
+  <link rel="stylesheet" href="creer-mariage.css" />
+</head>
+<body>
+
+  <!-- ===== BARRE DE NAVIGATION ===== -->
+  <nav class="navbar">
+    <div class="logo"><img src="Logo/Gemini_Generated_Image_72lppq72lppq72lp.png" alt=""></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="creer-mariage.html" class="btn-nav">+ Créer un Mariage</a></li>
+      <li><a href="mariage.html">Tous les mariages</a></li>
+      <li><a href="rsvp.html">RSVP</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== EN-TÊTE DE LA PAGE ===== -->
+  <div class="entete">
+    <h1>Créer votre Mariage</h1>
+    <p>Remplissez le formulaire ci-dessous pour publier votre événement</p>
+  </div>
+
+  <!-- ===== FORMULAIRE PRINCIPAL ===== -->
+  <main class="contenu-principal">
+    <form class="formulaire-mariage" action="#" method="post">
+
+      <!-- SECTION 1 : LES MARIÉS -->
+      <div class="section-formulaire">
+        <h2>👰🤵 Les Mariés</h2>
+
+        <div class="groupe-champs">
+          <!-- Nom du marié -->
+          <div class="champ">
+            <label for="nom-marie">Prénom et Nom du Marié</label>
+            <input type="text" id="nom-marie" name="nom-marie" placeholder="Ex: Sidy Gacko" required />
+          </div>
+
+          <!-- Nom de la mariée -->
+          <div class="champ">
+            <label for="nom-mariee">Prénom et Nom de la Mariée</label>
+            <input type="text" id="nom-mariee" name="nom-mariee" placeholder="Ex: Rama Diatta" required />
+          </div>
+        </div>
+
+        <!-- Email de contact -->
+        <div class="champ">
+          <label for="email">Email de contact</label>
+          <input type="email" id="email" name="email" placeholder="votre@email.com" required />
+        </div>
+
+        <!-- Téléphone -->
+        <div class="champ">
+          <label for="telephone">Téléphone</label>
+          <input type="tel" id="telephone" name="telephone" placeholder="+221 77 000 00 00" />
+        </div>
+      </div>
+
+      <!-- SECTION 2 : DATE ET LIEU -->
+      <div class="section-formulaire">
+        <h2>📅 Date et Lieu</h2>
+
+        <div class="groupe-champs">
+          <!-- Date du mariage -->
+          <div class="champ">
+            <label for="date-mariage">Date du Mariage</label>
+            <input type="date" id="date-mariage" name="date-mariage" required />
+          </div>
+
+          <!-- Heure du mariage -->
+          <div class="champ">
+            <label for="heure-mariage">Heure de la Cérémonie</label>
+            <input type="time" id="heure-mariage" name="heure-mariage" required />
+          </div>
+        </div>
+
+        <!-- Lieu de la cérémonie -->
+        <div class="champ">
+          <label for="lieu-ceremonie">Lieu de la Cérémonie</label>
+          <input type="text" id="lieu-ceremonie" name="lieu-ceremonie" placeholder="Ex: hôtel Radisson, Dakar" required />
+        </div>
+
+        <!-- Adresse complète -->
+        <div class="champ">
+          <label for="adresse">Adresse complète</label>
+          <textarea id="adresse" name="adresse" rows="3" placeholder="Ex: Route de la Corniche-Est, Dakar, Sénégal"></textarea>
+        </div>
+
+        <!-- Lieu de la réception (si différent) -->
+        <div class="champ">
+          <label for="lieu-reception">Lieu de la Réception (si différent)</label>
+          <input type="text" id="lieu-reception" name="lieu-reception" placeholder="Ex: Salle des fêtes, Plateau" />
+        </div>
+      </div>
+
+      <!-- SECTION 3 : DÉTAILS DE L'ÉVÉNEMENT -->
+      <div class="section-formulaire">
+        <h2>✨ Détails de l'Événement</h2>
+
+        <!-- Message pour les invités -->
+        <div class="champ">
+          <label for="message-invites">Message pour les invités</label>
+          <textarea id="message-invites" name="message-invites" rows="4" placeholder="Ex: Nous sommes heureux de vous inviter à célébrer notre union..."></textarea>
+        </div>
+
+        <!-- Nombre d'invités attendus -->
+        <div class="champ">
+          <label for="nb-invites">Nombre d'invités attendus</label>
+          <input type="number" id="nb-invites" name="nb-invites" placeholder="Ex: 150" min="1" />
+        </div>
+
+        <!-- Type de mariage -->
+        <div class="champ">
+          <label for="type-mariage">Type de cérémonie</label>
+          <select id="type-mariage" name="type-mariage">
+            <option value="">-- Choisir --</option>
+            <option value="civil">Mariage Civil</option>
+            <option value="religieux">Mariage Religieux</option>
+            <option value="traditionnel">Mariage Traditionnel</option>
+            <option value="mixte">Mariage Mixte</option>
+          </select>
+        </div>
+
+        <!-- Code vestimentaire -->
+        <div class="champ">
+          <label for="code-vestimentaire">Code Vestimentaire</label>
+          <input type="text" id="code-vestimentaire" name="code-vestimentaire" placeholder="Ex: Tenue de soirée, Couleur blanc et or" />
+        </div>
+      </div>
+
+      <!-- SECTION 4 : PHOTO DU MARIAGE -->
+      <div class="section-formulaire">
+        <h2>📷 Photo de Couverture</h2>
+
+        <div class="champ">
+          <label for="photo-couple">Télécharger une photo du couple</label>
+          <input type="file" id="photo-couple" name="photo-couple" accept="image/*" />
+          <small>Formats acceptés : JPG, PNG. Taille max : 5 Mo</small>
+        </div>
+
+        <!-- Aperçu de la photo -->
+        <div id="apercu-photo" class="apercu-photo">
+          <p>L'aperçu de votre photo apparaîtra ici</p>
+        </div>
+      </div>
+
+      <!-- SECTION 5 : BOUTONS D'ACTION -->
+      <div class="boutons-action">
+        <button type="reset" class="btn-annuler">Effacer</button>
+        <button type="submit" class="btn-publier">💍Publier le Mariage</button>
+      </div>
+
+    </form>
+  </main>
+
+  <!-- ===== PIED DE PAGE ===== -->
+  <footer class="pied-page">
+    <p>Three Minds One Code &copy; 2025 — Tous droits réservés</p>
+    <p>Projet réalisé par Three Minds One Code</p>
+  </footer>
+
+</body>
+</html>
