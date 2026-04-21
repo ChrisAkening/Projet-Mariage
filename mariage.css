@@ -1,0 +1,162 @@
+.navbar {
+  background-color: #fff;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #f0e6d3;
+  position: fixed;
+  top: 0;
+  width: 97%;
+  z-index: 97;
+}
+.logo img{
+  width: 150px;
+  border-radius: 50%;
+  font-weight: bold;
+  color: #8b5e3c;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  color: #8b5e3c;
+}
+
+/* Bouton spécial dans la navbar */
+.btn-nav {
+  background-color: #8b5e3c;
+  color: #fff !important;
+  padding: 8px 18px;
+  border-radius: 25px;
+}
+
+.btn-nav:hover {
+  background-color: #6d4a2e !important;
+}
+.union{
+  /* L'image de fond reste fixe quand on scrolle = effet parallax */
+  background-image: url(Projet-Mariage/images/WhatsApp\ Image\ 2026-04-19\ at\ 18.19.15.jpeg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+.maried {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 50px 60px;
+  border-radius: 10px;
+  margin-top: 100px;
+
+}
+.maried h3{
+font-size: 48px;
+  color: black;
+  margin-bottom: 15px;
+}
+.maried h1{
+ font-size: 20px;
+  color: black;
+  margin-bottom: 25px;
+}
+
+
+.tmariages .tm{
+  color: #8b5e3c;
+   font-weight:bold ;
+   font-size: 40px;
+  text-align: center;
+
+}
+.tmariages .unite{
+  color: grey;
+  text-align: center;
+}
+.card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+   
+}
+.card :hover{
+  cursor: pointer;
+}
+.first{
+  border: 1px rgb(85, 78, 65) solid; 
+  text-align:center;
+  padding: px;
+  border-radius: 10px;
+  
+}
+.first h3{
+  color:#8b5e3c;
+}
+.first img{
+  width: 300px;
+  height: 300px;
+  border-radius: 5px;
+  transition:2s
+}
+.first img:hover{
+  
+  transform: scale(1.4);
+}
+.first a{
+  text-decoration: none;
+  background-color:#8b5e3c;
+  padding: 8px;
+  border-radius: 10px;
+  color: white;
+}
+.det{
+  padding: 10px;
+}
+.creation{
+  background-color: #f0e6d3;
+
+  font-weight: bold;
+  text-align: center;
+  padding: 80px 20px; text-align: center;
+  margin-top: 50px;
+}
+.creation h1{
+margin-bottom: 12px;
+color: #8b5e3c;
+}
+.creation p{
+color: grey;
+}
+.creation a{
+  text-decoration: none;
+  background-color:#8b5e3c ;
+  padding: 10px;
+  color: white;
+  border-radius: 10px;
+}
+
+.pied-page {
+  background-color: #8b5e3c;
+  color: #fff;
+  text-align: center;
+  padding: 30px;
+  font-size: 14px;
+  line-height: 2;
+  margin-top:50px ;
+}
