@@ -1,0 +1,212 @@
+.navbar {
+  background-color: #fff;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #f0e6d3;
+  position: fixed;
+  top: 0;
+  width: 97%;
+  z-index: 97;
+}
+.logo img{
+  width: 150px;
+  border-radius: 50%;
+  font-weight: bold;
+  color: #8b5e3c;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  color: #8b5e3c;
+}
+
+/* Bouton spécial dans la navbar */
+.btn-nav {
+  background-color: #8b5e3c;
+  color: #fff !important;
+  padding: 8px 18px;
+  border-radius: 25px;
+}
+
+.btn-nav:hover {
+  background-color: #6d4a2e !important;
+}
+form{
+  background-color:#6d4a2e ;
+  display: grid;
+  grid-template-columns: 1fr 1fr;/*deux colonnes egale*/
+  gap: 20px;
+  color: #1e815b;
+}
+.widht{
+  grid-column: span 2;
+}label{
+  display: block;
+  font-size: 30px;
+  font-weight: bold;
+color: whitesmoke;
+  margin-bottom: 6px;
+  text-transform: uppercase;/*change l'apparence en Maj*/
+  letter-spacing: 1px;
+}
+input,select,textarea{
+  width: 100%;
+  padding: 12px;
+  background: transparent;
+  border: 1px solid #777;
+  border-radius: 5px;
+  color:black;
+  font-size: 14px;
+  outline: none;/*sup le contour*/
+  transition: 0.3s;
+}select{
+  cursor: pointer;
+}textarea{
+  height: 120px;
+  resize: none;/*empeche un utilisateur de redimensionner un elmt*/
+}button{
+  grid-column: span 2;
+  padding: 15px;
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 5px;
+}button:hover {
+background: #fff;
+color: #1b1d2e;
+}
+.container{
+  width: 100%;
+  max-width: 900px;
+  margin: 50px auto;
+}h2{
+text-align: center;
+color:maroon;
+
+}
+p{
+text-align: center;
+color:#8b5e3c;
+}
+.formulaire {
+ padding: 20px;
+  max-width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 colonnes */
+  gap: 40px;
+}
+
+.large { grid-column: 1 / -1; } /* prend les 2 colonnes 
+Le champ "message" prend toute la largeur du formulaire (les 2 colonnes).*/
+
+label {
+  display: block;
+  color: whitesmoke;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+
+input, select, textarea {
+  width: 80%;
+  background: rgba(97, 43, 43, 0.8);
+  border: 1px solid rgba(201,169,110,0.3);
+  color: white;
+  padding: 14px 16px;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #c9a96e; /* bordure dorée au clic Quand on clique sur un champ, la bordure devient dorée.
+ */
+}
+
+textarea { resize: vertical; min-height: 110px; }/*
+Pour le grand champ de message :
+resize: vertical → l'utilisateur peut l'agrandir uniquement vers le bas 
+*/
+
+.bouton-form { grid-column: 1 / -1; text-align: center; }/*bouton "Envoyer" prend toute la largeur et est centré.
+*/
+
+.bouton-form button {
+  background: transparent;
+  border: 1px solid #c9a96e;
+  color: #c9a96e;
+  padding: 14px 50px;
+  font-size: 0.85rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.rsvp{
+ text-align: center;
+color:aliceblue;
+font-weight: bold;
+padding: 80px 100px ;
+}
+.bouton-form button:hover { background: #c9a96e; color: white; }/*Quand on passe la souris sur le bouton, le fond devient doré et le texte devient blanc.*/
+.defile-texte{
+    width:75%;
+    white-space:nowrap;
+    overflow:hidden;
+    background:#6d4a2e;
+    color:white;
+    font-size:20px;
+    padding:10px 0;
+    box-sizing:border-box;
+    border-radius: 30%;
+    margin-bottom: 50px;
+}
+
+.defile-texte::after{
+    content: attr(data-text);
+}
+
+/* Animation */
+.defile-texte{
+    display:inline-block;
+    animation:defile 30s linear infinite;
+}
+
+@keyframes defile{
+    0%{
+        transform:translateX(100%);
+    }
+    100%{
+        transform:translateX(-100%);
+    }
+
+    }
+    .pied-page {
+  background-color: #8b5e3c;
+  color: #fff;
+  text-align: center;
+  padding: 30px;
+  font-size: 14px;
+  line-height: 2;
+}
+.fin{
+color: white;
+}
