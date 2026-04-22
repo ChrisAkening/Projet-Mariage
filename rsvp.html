@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="rsvp.css">
+</head>
+<body>
+     <header><hr><hr>
+
+         <!-- ===== BARRE DE NAVIGATION ===== -->
+        <nav class="navbar">
+            <div class="logo"><img src="Logo/Gemini_Generated_Image_72lppq72lppq72lp.png" alt=""></div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="creer-mariage.html" class="btn-nav">+ Créer un Mariage</a></li>
+                    <li><a href="mariage.html">Tous les mariages</a></li>
+                    <li><a href="rsvp.html">RSVP</a></li>
+                    <li><a href="contact.html">Contact</a></li>    
+                </ul>
+        </nav>
+    </header><hr><hr>
+
+
+    <section class="rsvp">
+         <h2>🌸Bienvenue à notre mariage/evenement💃</h2>
+        <p>🌺Nous sérions honorés de votre présence à notre grand jour✨🤩</p>
+        <div class="defile-texte">
+ <h2><b><u>REPONDEZ S'IL VOUS PLAIT</u></b></h2>
+        </div>
+       
+     <form class="formulaire" action="#" method="POST">
+
+  <div>
+    <label for="prenom">Prénom</label>
+    <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required />
+  </div>
+
+  <div>
+    <label for="nom">Nom</label>
+    <input type="text" id="nom" name="nom" placeholder="Votre nom" required />
+  </div>
+
+  <div>
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="votre@email.com" required />
+  </div>
+
+  <div>
+    <label for="telephone">Téléphone</label>
+    <input type="tel" id="telephone" name="telephone" placeholder="+221 77 000 00 00" />
+  </div>
+
+  <div>
+    <label for="presence">Votre réponse</label>
+    <select id="presence" name="presence" required>
+      <option value="">-- Choisir --</option>
+      <option value="oui">✅ Oui, je serai présent(e)</option>
+      <option value="non">❌ Non, je ne pourrai pas venir</option>
+      <option value="peut-etre">🤔 Peut-être</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="personnes">Nombre accompagnants</label>
+    <input type="number" id="personnes" name="personnes" placeholder="Ex : 1" min="1" max="2" />
+  </div>
+
+  <div class="large">
+    <label for="message">Message (optionnel)</label>
+    <textarea id="message" name="message" placeholder=" Message pour les mariés…"></textarea>
+  </div>
+
+  <div class="bouton-form">
+    <button type="submit">Envoyer ma réponse</button>
+  </div>
+
+</form><br><br><br><br><br><br>
+      <footer class="pied-page">
+    <p class="fin">💍Three Minds One Code &copy; 2025 — Tous droits réservés</p>
+    <p class="fin">Projet réalisé par Three Minds One Code</p>
+  </footer>
+   
+      </body>
+      </html>
