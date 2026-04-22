@@ -1,0 +1,320 @@
+.navbar {
+  background-color: #fff;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #f0e6d3;
+  position: fixed;
+  top: 0;
+  width: 97%;
+  z-index: 97;
+}
+.logo img{
+  width: 150px;
+  border-radius: 50%;
+  font-weight: bold;
+  color: #8b5e3c;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  color: #8b5e3c;
+}
+
+/* Bouton spécial dans la navbar */
+.btn-nav {
+  background-color: #8b5e3c;
+  color: #fff !important;
+  padding: 8px 18px;
+  border-radius: 25px;
+}
+
+.btn-nav:hover {
+  background-color: #6d4a2e !important;
+}
+
+.m1{
+  /* L'image de fond reste fixe quand on scrolle = effet parallax */
+  background-image: url(Projet-Mariage/mariage1/paralaxm1.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.mar1{
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 50px 60px;
+  border-radius: 10px;
+  margin-top: 100px;
+  animation:typing 4s steps(20) infinite,blink .6s infinite;
+}
+.mar1 h1{
+    color: #8b5e3c;
+    font-size: 40px;
+}
+.mar1 h2{
+     color: #8b5e3c;
+    font-size: 25px;
+}
+/* Rendre tout invisible  */
+.mar1 h1,.mar1 h2{
+    opacity: 0;
+    transform: translateY(10px);
+    animation: simpleFade 1s ease-out forwards;
+}
+.mar1 h2:nth-of-type(1){
+    animation-delay: 1s;
+}
+.mar1 h2:nth-of-type(2){
+    animation-delay: 2s;
+}
+@keyframes simpleFade{
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.marié h1{
+    text-align: center;
+    color: #8b5e3c;
+}
+.couple{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+}
+.lien1{
+border: 1px rgb(85, 78, 65) solid;
+border-radius: 10px;
+}
+.lien1 img{
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    transition: 2s;
+}
+.lien1 img:hover{
+   transform: scale(1.4);
+}
+.lien1 h2{
+    color: #8b5e3c;
+    text-align: center;
+}
+.lien2{
+    font-size: 70px;
+}
+.histoire{
+    background-image: url(Projet-Mariage/mariage1/paralaxm1.jpg);
+    background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+    margin-top: 30px;
+}
+.histoire .hist{
+    color: #8b5e3c;
+    text-align: center;
+}
+.histoire .hist2{
+    color: rgb(105, 95, 95);
+    font-weight:bold;
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+     font-family: 'Courier New', Courier, monospace;
+}
+.un{
+  color: #8b5e3c;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+}
+.divin{
+   background-color: rgba(255, 255, 255, 0.8);
+  padding: 50px 60px;
+  border-radius: 10px;
+  margin-top: 100px;
+}
+.am{
+  color:#8b5e3c;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+}
+/* On définit l'effet  */
+@keyframes apparition{
+  from{
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+  /* Pour que l effet se declenche au scroll */
+}
+.divin h1,.divin p{
+  /* On lie l'animation */
+    animation: apparition linear; 
+    animation-timeline: view();
+    /* L effet se fait sur les premiers 30% de l'apparition */
+  animation-range: entry 0% cover 30%;
+}
+.souvenir .moment{
+  text-align: center;
+  color: #8b5e3c;
+}
+/* --- LE CONTENEUR --- */
+.galerie-explosive {
+    position: relative;
+    width: 250px; /* Taille de ton image centrale */
+    height: 350px;
+    margin: 400px auto; /* Grande marge pour l'orbite */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Indispensable pour que les rotations 3D fonctionnent bien */
+    transform-style: preserve-3d; 
+    perspective: 1000px;
+}
+
+/* --- STYLE DE TOUTES LES IMAGES --- */
+.galerie-explosive img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 6px solid white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    
+    /* Transition pour l'explosion initiale (quand on survole) */
+    transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+    /* ÉTAT INITIAL (Cachées au centre) */
+    opacity: 0;
+    transform: scale(0);
+    pointer-events: none;
+    z-index: var(--i);
+}
+
+.galerie-explosive {
+    position: relative;
+    width: 200px; /* Taille de l'image centrale */
+    height: 280px;
+    margin: 400px auto; /* Espace généreux pour l'orbite */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+}
+
+.galerie-explosive img {
+    position: absolute;
+    /* On réduit un peu les satellites pour qu'ils ne se touchent pas */
+    width: 150px; 
+    height: 210px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 4px solid white;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+    opacity: 0;
+    transform: scale(0);
+    pointer-events: none;
+}
+
+/* Style spécifique pour l'image centrale (plus grande) */
+.galerie-explosive img.main-img {
+    width: 200px;
+    height: 280px;
+    opacity: 1;
+    transform: scale(1);
+    z-index: 100; /* Toujours au premier plan */
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+/* --- L'ANIMATION --- */
+
+.galerie-explosive:hover img:not(.main-img) {
+    opacity: 1;
+    pointer-events: auto;
+
+    /* CALCULS :
+       --angle : Chaque image démarre à un endroit différent du cercle (360/9 = 40deg)
+       --rayon : Distance du centre (augmentée à 380px pour éviter les collisions)
+    */
+    --angle: calc(var(--i) * 40deg);
+    --rayon: 380px; 
+
+    /* Position initiale de l'explosion */
+    transform: 
+        rotate(var(--angle)) 
+        translateX(var(--rayon)) 
+        rotate(calc(var(--angle) * -1));
+
+    /* Lancement de l'orbite après l'explosion */
+    /* On utilise 'linear' pour un mouvement fluide et 'infinite' */
+    animation: orbite-propre 25s linear infinite 0.8s;
+}
+
+/* L'IMAGE CENTRALE RESTE FIXE ET GROSSIT UN PEU */
+.galerie-explosive:hover img.main-img {
+    transform: scale(1.1);
+}
+
+/* --- LA LOGIQUE DE ROTATION SANS COLLISIONS --- */
+
+@keyframes orbite-propre {
+    from {
+        /* On part de l'angle de départ de l'image (--angle) */
+        transform: 
+            rotate(var(--angle)) 
+            translateX(380px) 
+            rotate(calc(var(--angle) * -1));
+    }
+    to {
+        /* On ajoute 360 degrés à l'angle de départ pour faire un tour complet */
+        transform: 
+            rotate(calc(var(--angle) + 360deg)) 
+            translateX(380px) 
+            rotate(calc((var(--angle) + 360deg) * -1));
+    }
+}
+.merci{
+  text-align: center;
+  color: #8b5e3c;
+  font-size: 20px;
+  font-weight: bold;
+}
+.pied-page {
+  background-color: #8b5e3c;
+  color: #fff;
+  text-align: center;
+  padding: 30px;
+  font-size: 14px;
+  line-height: 2;
+  margin-top:50px ;
+}
